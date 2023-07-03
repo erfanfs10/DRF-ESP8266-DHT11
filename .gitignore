@@ -1,0 +1,10 @@
+local_*.py
+*.pyc
+.vscode/
+.idea/
+*.sqlite3
+__pycatch__/
+*.jpg
+*.jpeg
+*.png
+*.log
