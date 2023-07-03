@@ -66,11 +66,11 @@ void loop() {
   String humi = String(humidity, 2);
 
   display.clearDisplay();
-  display.setCursor(5,10);
-  display.println("TEMPERATURE: "+temp);
+  display.setCursor(2,10);
+  display.println("TEMPERATURE: "+temp+" C");
   display.println("");
-  display.setCursor(5,30);
-  display.println("HUMIDITY: "+humi);
+  display.setCursor(2,30);
+  display.println("HUMIDITY: "+humi+" %");
   display.display();
 
 
@@ -95,12 +95,12 @@ void loop() {
 
   if (httpPostResponseCode == 201){
     display.setCursor(0,50);
-    display.print("POST DONE");
+    display.print("POST:DONE ");
     display.display();
   }
   else{
     display.setCursor(0,50);
-    display.print("POST FAILD");
+    display.print("POST:FAILD ");
     display.display();
   }
 
@@ -112,12 +112,12 @@ void loop() {
 
   if (httpGetResponseCode == 200){
       display.setCursor(64,50);
-      display.println("GET DONE");
+      display.println("GET:DONE");
       display.display();
     }
   else{
       display.setCursor(64,50);
-      display.println("GET FAILD");
+      display.println("GET:FAILD");
       display.display();
     }
   
@@ -154,7 +154,7 @@ void connectToWiFi() {
   Serial.println(WiFi.localIP());
   
   display.println("\nConnected to "+ WiFi.SSID());
-  display.setCursor(3,30);
+  display.setCursor(3,35);
   display.print("IP : ");
   display.println(WiFi.localIP());
   display.display();
